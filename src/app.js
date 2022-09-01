@@ -14,6 +14,6 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 /* Importing the productRoutes from the product.routes file. */
-app.use("/api-restfull/books",bookRoutes);
+app.use("/api/books", bookRoutes);
 
 export default app;
