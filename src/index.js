@@ -1,4 +1,4 @@
-import app from "./app"
+import app from "./app.js"
 
 /**
  * The main function is a function that listens to the port that the app is running on and logs a

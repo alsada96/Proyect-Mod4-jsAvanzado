@@ -1,6 +1,6 @@
 /* Importing the mysql and config files. */
 import mysql from "promise-mysql";
-import config  from "./../config";
+import config  from "./../config.js";
 
 /* Creating a connection to the database. */
 const connection = mysql.createConnection({
@@ -10,10 +10,10 @@ const connection = mysql.createConnection({
     password: config.password   
 });
 
-const getConnection = () => {
+export const getConnection = () => {
     return connection
 };
 
-module.exports = {
-    getConnection
-}; 
+// module.exports = {
+//     getConnection
+// }; 

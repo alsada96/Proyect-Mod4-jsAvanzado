@@ -1,5 +1,5 @@
 /* Importing the getConnection function from the connection.js file. */
-import { getConnection } from "./../commons/connection"
+import { getConnection } from "./../commons/connection.js"
 
 /**
  * It gets a connection to the database, then it queries the database for all the books, then it sends
