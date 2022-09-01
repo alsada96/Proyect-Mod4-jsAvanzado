@@ -4,8 +4,8 @@
   "description": "API RESTful using express and connected to database (MySQL)",
   "main": "index.js",
   "scripts": {
-    "product": "babel-node --presets=@babel/preset-env",
-    "dev": "nodemon --exec npm run product src/index.js"
+    "babel-node": "babel-node --presets=@babel/preset-env",
+    "dev": "nodemon --exec npm run babel-node src/index.js"
   },
   "repository": {
     "type": "git",
