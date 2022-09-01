@@ -3,7 +3,7 @@ import mysql from "promise-mysql";
 import config  from "./../config.js";
 
 /* Creating a connection to the database. */
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host: config.host,
     database: config.database,
     user: config.user,
@@ -11,7 +11,7 @@ const connection = mysql.createConnection({
 });
 
 export const getConnection = () => {
-    return connection
+    return connection;
 };
 
 // module.exports = {
