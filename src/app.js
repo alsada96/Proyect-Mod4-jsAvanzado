@@ -4,6 +4,7 @@ import express from "express";
 
 /* Importing the productRoutes from the product.routes file. */
 import bookRoutes from "./routes/books.routes.js";
+import videoRoutes from "./routes/videos.routes.js";
 import config from "./config.js";
 
 const app = express();
@@ -19,5 +20,6 @@ app.use(express.json());
 
 /* Importing the productRoutes from the product.routes file. */
 app.use("/api/books", bookRoutes);
+app.use("/api/videos", videoRoutes);
 
 export default app;
