@@ -1,4 +1,4 @@
-# DevF Kata JavaScript Avanzado Proyecto "Api en Express"
+# DEVF Kata JavaScript Avanzado Proyecto "Api en Express"
 
 ## Contenido
 
@@ -12,7 +12,7 @@
 8. [Previews](#previews)
 
 ### Descripcion
-Creamos una API REST usando Node.js, el framework web Express y el sistema gestor de bases de datos MySQL, con los métodos HTTP GET, POST, PUT y DELETE. Realizamos la  prueba de funcionamiento utilizando un cliente REST en Postman ademas de un despliegue en 'Heroku'.
+Creamos una API REST usando Node.js, el framework web Express y el sistema gestor de bases de datos MySQL, la cual cuenta con dos "Entidades" o mejor conocidas como tablas (books y videos) para poder realizar peticiones con los métodos HTTP: GET, POST, PUT y DELETE. Realizamos la  prueba de funcionamiento utilizando un cliente REST en Postman ademas de un despliegue en 'Heroku'.
 
 ### Tecnologias utilizadas:
 <img src="https://img.shields.io/badge/JavaScript-fbe257?style=for-the-badge&logo=javascript&logoColor=black"> 
@@ -42,9 +42,17 @@ Para obtener todos los libros disponibles usamos:
 - **GET** https://sheltered-garden-91067.herokuapp.com/api/books/
 - **GET** http://localhost:4000/api/books/
 
+Para obtener todos los videos disponibles usamos:
+- **GET** https://sheltered-garden-91067.herokuapp.com/api/videos/
+- **GET** http://localhost:4000/api/videos/
+
 Si desea encontrar la información un libro en especifico solo agregamos el **ID** en la petición:
 - **GET** https://sheltered-garden-91067.herokuapp.com/api/books/(ID)
 - **GET** http://localhost:4000/api/books/(ID)
+
+Si desea encontrar la información un video en especifico solo agregamos el **ID** en la petición:
+- **GET** https://sheltered-garden-91067.herokuapp.com/api/videos/(ID)
+- **GET** http://localhost:4000/api/videos/(ID)
 
 ### POST
 Podemos agregar un nuevo libro con la petición de **POST**, solo asegurese de llenar todos los datos solicitados correctamente:
@@ -73,8 +81,32 @@ Es necesario que la informacion este en formato JSON, ejemplo:
 - **POST** https://sheltered-garden-91067.herokuapp.com/api/books/
 - **POST** http://localhost:4000/api/books/
 
+Podemos agregar un nuevo video con la petición de **POST**, solo asegurese de llenar todos los datos solicitados correctamente:
+
+1. id ( numero entero unico e irrepetible): Identificador unico para el video dentro de la Base de Datos.
+2. video_name: nombre del video.
+3. url: enlace o ubicación del video.
+4. duration (string con formato “00.00.00” ): Tiempo que dura la reproduccion del video.
+5. views_number(decimal): Total de vistas que tiene el video.
+6. video_type: Clasificacion del video segun su contenido.
+
+Es necesario que la informacion este en formato JSON, ejemplo:
+```json
+{  
+    "id": 4,
+    "video_name": "sample3",
+    "url": "sample url3",
+    "duration": "15:30",
+    "views_number": 15,
+    "video_type": "mp4"
+    
+}
+```
+- **POST** https://sheltered-garden-91067.herokuapp.com/api/videos/
+- **POST** http://localhost:4000/api/videos/
+
 ### PUT
-Si desea editar la información de algun video ya publicado utilice la petición **PUT**. Debera incluir el **ID** unico del LIBRO y la información a editar.
+Si desea editar la información de algun libro ya publicado utilice la petición **PUT**. Debera incluir el **ID** unico del libro y la información a editar.
 Ejemplo formato JSON para editar informacion:
 ```json
 {
@@ -84,10 +116,24 @@ Ejemplo formato JSON para editar informacion:
 - **PUT** https://sheltered-garden-91067.herokuapp.com/api/books/(ID)
 - **PUT** http://localhost:4000/api/books/(ID)
 
+Si desea editar la información de algun video ya publicado utilice la petición **PUT**. Debera incluir el **ID** unico del video y la información a editar.
+Ejemplo formato JSON para editar informacion:
+```json
+{
+    "views_number": 15,
+}
+```
+- **PUT** https://sheltered-garden-91067.herokuapp.com/api/videos/(ID)
+- **PUT** http://localhost:4000/api/videos/(ID)
+
 ### DEL
 Para eliminar por completo un LIBRO basta con utilizar la petición **PUT**, especificando el **ID** del libro a eliminar.
 - **DELETE** https://sheltered-garden-91067.herokuapp.com/api/books/(ID)
 - **DELETE** http://localhost:4000/api/books/(ID)
+
+Para eliminar por completo un video basta con utilizar la petición **PUT**, especificando el **ID** del video a eliminar.
+- **DELETE** https://sheltered-garden-91067.herokuapp.com/api/videos/(ID)
+- **DELETE** http://localhost:4000/api/videos/(ID)
 
 ### Previews
 - Peticion Get dashbord Heroku (Navegador)
