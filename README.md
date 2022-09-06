@@ -94,5 +94,5 @@ Para eliminar por completo un LIBRO basta con utilizar la petición **PUT**, esp
 ![](./Preview/Preview1.jpg)
 ![](./Preview/Preview2.jpg)
 ![](./Preview/Preview3.jpg)
-- Peticiones videos Postman 
-![](./assets/Proyect-Mod4-jsAvanzado.postman_collection.json)
+- Peticiones importadas Postman 
+[Importacion](./assets/Proyect-Mod4-jsAvanzado.postman_collection.json)
