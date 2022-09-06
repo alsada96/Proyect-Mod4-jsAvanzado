@@ -9,6 +9,7 @@
 5. [Post](#post)
 6. [Put](#put)
 7. [Delete](#delete)
+8. [Previews](#previews)
 
 ### Descripcion
 Creamos una API REST usando Node.js, el framework web Express y el sistema gestor de bases de datos MySQL, con los métodos HTTP GET, POST, PUT y DELETE. Realizamos la  prueba de funcionamiento utilizando un cliente REST en Postman ademas de un despliegue en 'Heroku'.
@@ -88,6 +89,10 @@ Para eliminar por completo un LIBRO basta con utilizar la petición **PUT**, esp
 - **DELETE** https://sheltered-garden-91067.herokuapp.com/api/books/(ID)
 - **DELETE** http://localhost:4000/api/books/(ID)
 
-### Previzualizacion de uso
+### Previews
 - Peticion Get dashbord Heroku (Navegador)
 ![](./Preview/Preview1.jpg)
+![](./Preview/Preview2.jpg)
+![](./Preview/Preview3.jpg)
+- Peticiones videos Postman 
+![](./assets/Proyect-Mod4-jsAvanzado.postman_collection.json)
